@@ -1,0 +1,32 @@
+/*
+ * @lc app=leetcode id=287 lang=cpp
+ *
+ * [287] Find the Duplicate Number
+ */
+
+// @lc code=start
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int s = nums[0];
+        int f = nums[0];
+
+        // cycle detection
+        while(true){
+            s = nums[s];
+            f = nums[nums[f]];
+
+            if(s == f) break;
+        }
+
+
+         s = nums[0];
+        while(s != f){
+            s = nums[s];
+            f = nums[f];
+        }
+        return s; 
+    }
+};
+// @lc code=end
+

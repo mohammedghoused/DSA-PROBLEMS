@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/SOFTWARES/CodeBlocks/MinGW/include",
+                "D:/SOFTWARES/CodeBlocks/MinGW/lib/gcc/mingw32/8.1.0/include",
+                "D:/SOFTWARES/CodeBlocks/MinGW/lib/gcc/mingw32/8.1.0/include/c++"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:/SOFTWARES/CodeBlocks/MinGW/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,21 @@
+Logic
+Hum array ke elements ek-ek karke add karte jayenge prefix_sum me.
+Agar kabhi prefix_sum = 0 ho jaye, iska matlab hai:
+
+1. Start se leke ab tak ka subarray sum = 0. | length = start(0) to current(i)
+2. Agar koi prefix_sum pehle se appear ho chuka ho hmap me , iska matlab hai:
+    --->Beech ka subarray sum = 0. | length = hmap[prefix_sum] + 1 to cuurent(i)
+Kyun??
+ 9 prefix_sum = 9
+ 3 prefix_sum = 12
+ -3 prefix_sum = 9
+
+ mtlb kuch add hoke substract hone se hi value wohi pe aajati hai isliye 
+ beech ke subarrays ka sum 0 hoga.
+
+Agar sum kabhi repeat nahi hua → continue karte jao.
+Har step me longest subarray length update karte jao.
+
+
+
+
