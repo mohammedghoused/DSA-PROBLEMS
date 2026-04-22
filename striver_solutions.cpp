@@ -2,45 +2,38 @@
 #include <vector>
 using namespace std;
 #include <stack>
+void deleteMid(stack<int> &s , int k){
 
-void insert(stack<int> &s,int val){
-    if(s.size() == 0){
-        s.push(val);
+    
+
+    if(k==1) {
+        s.pop();
         return;
     }
 
-    int temp = s.top();
+    int top = s.top();
     s.pop();
-    insert(s,val);
-    s.push(temp);
-}
+    deleteMid(s,k-1);
 
-void reverse(stack<int> &s){
-
-    if(s.size() == 1) return;
-    int val = s.top();
-    s.pop();
-    reverse(s);
-
-    insert(s,val);
-
-    return;
+    s.push(top);
 }
 
 int main(){
-    stack<int> s;
+     stack<int> s;
 
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
     s.push(5);
+    s.push(4);
+    s.push(3);
+    s.push(2);
+    s.push(1);
 
+    int k = s.size();
    
-    reverse(s);
+    
+    deleteMid(s,k/2+1);
 
     while(!s.empty()){
-        cout << s.top() << "\n";
+        cout << s.top() << " ";
         s.pop();
     }
 }
