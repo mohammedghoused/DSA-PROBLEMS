@@ -2,38 +2,30 @@
 #include <vector>
 using namespace std;
 #include <stack>
-void deleteMid(stack<int> &s , int k){
 
-    
-
-    if(k==1) {
-        s.pop();
+void solve(string ip,string op){
+    if(ip.length() == 0){
+        cout<<op<<" ";
         return;
     }
 
-    int top = s.top();
-    s.pop();
-    deleteMid(s,k-1);
+    string op1 = op;
+    string op2 = op;
 
-    s.push(top);
+    op2.push_back(ip[0]);
+    ip.erase(ip.begin() + 0);
+
+
+    solve(ip,op1);
+    solve(ip,op2);
+
+    return;
 }
-
 int main(){
-     stack<int> s;
 
-    s.push(5);
-    s.push(4);
-    s.push(3);
-    s.push(2);
-    s.push(1);
+    string ip = "ab";
+    string op = "";
 
-    int k = s.size();
-   
-    
-    deleteMid(s,k/2+1);
-
-    while(!s.empty()){
-        cout << s.top() << " ";
-        s.pop();
-    }
+    solve(ip,op);
+    return 0;
 }
