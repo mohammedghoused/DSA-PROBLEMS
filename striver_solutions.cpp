@@ -25,12 +25,3 @@ void solve(int open,int close,string op){
     
     
 }
-int main(){
-
-    int n=3;
-    int o = n;
-    int c = n;
-    string op = "";
-    solve(o,c,op);
-    return 0;
-}
